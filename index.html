@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offcanvas Plugin Example</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tambahkan CSS jika diperlukan -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="path/to/offcanvas.js"></script>
+</head>
+
+<body>
+
+    <!-- Button untuk toggle offcanvas -->
+    <button data-toggle="offcanvas" data-target=".offcanvas">Toggle Offcanvas</button>
+
+    <!-- Offcanvas element -->
+    <div class="offcanvas">
+        <button class="close-btn">Tutup</button>
+        <p>Ini adalah konten offcanvas!</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Menampilkan offcanvas menggunakan data-toggle
+            $('[data-toggle="offcanvas"]').click(function () {
+                var target = $(this).data('target');
+                $(target).offcanvas('toggle');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
