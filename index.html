@@ -7,6 +7,7 @@
     <title>Offcanvas Plugin Example</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="src/offcanvas-bs4.css">
     <style>
         html,
@@ -86,39 +87,149 @@
 
 <body class="">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
+        <header class="masthead mb-auto pb-3">
             <div class="inner">
-                <h5 class="masthead-brand text-center">Simple Offcanvas</h5>
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Contact</a>
+                <h5 class="masthead-brand text-center"><img src="img/meDigital-dev.png" alt="Logo meDigital-dev"
+                        height="25" class="mr-1">Simple Offcanvas</h5>
+                <nav class="nav nav-masthead justify-content-center" role="tablist">
+                    <a class="nav-link active" type="button" data-toggle="list" href="#home" role="tab">Home</a>
+                    <a class="nav-link" type="button" data-toggle="list" href="#docs" role="tab">Docs</a>
+                    <a class="nav-link" type="button" data-toggle="list" href="#extras" role="tab">Extras</a>
                 </nav>
             </div>
         </header>
 
-        <main role="main" class="inner cover text-center">
-            <img src="img/ss01.png" alt="Hero" class="img-fluid w-100 py-3">
-            <h3 class="cover-heading">Simple Offcanvas for Bootstrap 4!</h3>
-            <p class="lead">Offcanvas Plugin is a jQuery plugin that lets you create offcanvas elements, similar to
-                Bootstrap 5's offcanvas. It provides an interactive user experience with a backdrop and automatic
-                closing via backdrop click or the ESC key. Offcanvas is ideal for hiding side navigation or menus
-                without disrupting the main layout.
-            </p>
-            <h6>Demo</h6>
-            <p class="lead">
-                <button type="button" data-toggle="offcanvas" data-target=".offcanvas" class="btn btn-primary">With
-                    Data Attribute</button>
-                <button type="button" data-toggle="offcanvas" data-target=".offcanvas" class="btn btn-primary">With
-                    JQuery</button>
-            </p>
+        <main role="main" class="inner cover">
+            <div class="tab-content">
+                <div class="tab-pane fade" id="extras" role="tabpanel">
+                    <h5>Donation</h5>
+                    <ul>
+                        <li><a href="https://trakteer.id/mesaidlg/tip" target="_blank">Trakteer</a></li>
+                        <li><a href="https://ko-fi.com/mesaidlg" target="_blank">ko-fi.com</a></li>
+                        <li>
+                            <a href="https://buymeacoffee.com/mesaidlg" target="_blank">buymeacoffee</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="docs" role="tabpanel">
+                    <h5>Required</h5>
+                    <ul>
+                        <li>Bootstrap version 4.x</li>
+                        <li>jQuery</li>
+                    </ul>
+                    <hr class="bg-light">
+                    <h5>Download</h5>
+                    <ul>
+                        <li><a href="src/offcanvas-bs4.css" target="_blank" download="">offcanvas-bs4.css</a></li>
+                        <li><a href="src/offcanvas-bs4.js" target="_blank" download="">offcanvas-bs4.js</a></li>
+                    </ul>
+                    <hr class="bg-light">
+                    <h5>Instalation</h5>
+                    <p class="mb-0">
+                        <code>
+                            &lt;link rel="stylesheet" href="path/to/bootstrap.css"&gt;
+                            </code>
+                    </p>
+                    <p class="mb-0">
+                        <code>
+                            &lt;link rel="stylesheet" href="path/to/offcanvas.css"&gt;
+                            </code>
+                    </p>
+                    <p class="mb-0">
+                        <code>
+                            &lt;script src="path/to/bootstrap.js"&gt;&lt;/script&gt;
+                            </code>
+                    </p>
+                    <p class="mb-0">
+                        <code>
+                            &lt;script src="path/to/jquery.js"&gt;&lt;/script&gt;
+                            </code>
+                    </p>
+                    <p class="mb-0">
+                        <code>
+                            &lt;script src="path/to/offcanvas.js"&gt;&lt;/script&gt;
+                            </code>
+                    </p>
+                    <hr class="bg-light">
+                    <h5>Usage</h5>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <tr class="text-light">
+                                <th>Via</th>
+                                <th>Code</th>
+                                <th>Try It!</th>
+                            </tr>
+                            <tr>
+                                <td><code>Data Attribute</code></td>
+                                <td>
+                                    <code>data-toggle="offcanvas" data-target=".offcanvas"</code>
+                                </td>
+                                <td>
+                                    <button type="button" data-toggle="offcanvas" data-target=".offcanvas"
+                                        class="btn btn-sm btn-primary">Click</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>jQuery</code></td>
+                                <td>
+                                    <code>$('.offcanvas').offcanvas('method')</code>
+                                </td>
+                                <td>
+                                    <button type="button" id="btnOffcanvas"
+                                        class="btn btn-sm btn-primary">Click</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <hr class="bg-light">
+                    <h5>Methods</h5>
+                    <div class="table-responsive">
+
+                        <table class="table table-sm table-borderless text-light">
+                            <tr>
+                                <th>Method</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td><code>toggle</code></td>
+                                <td>Toggles an offcanvas element to shown or hidden.</td>
+                            </tr>
+                            <tr>
+                                <td><code>show</code></td>
+                                <td>Shows an offcanvas element.</td>
+                            </tr>
+                            <tr>
+                                <td><code>hide</code></td>
+                                <td>Hides an offcanvas element.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade show active" id="home" role="tabpanel">
+                    <img src="img/ss01.png" alt="Hero" class="img-fluid w-100 py-3">
+                    <h3 class="cover-heading text-center">Simple Offcanvas for Bootstrap 4!</h3>
+                    <p class="lead text-center">Offcanvas Plugin is a jQuery plugin that lets you create offcanvas
+                        elements, similar
+                        to
+                        Bootstrap 5's offcanvas.
+                    </p>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" data-toggle="offcanvas"
+                            data-target=".offcanvas">Demo</button>
+                    </div>
+
+                </div>
+            </div>
         </main>
 
-        <footer class="mastfoot mt-auto text-center">
-            <div class="inner d-flex justify-content-between">
-                <span>&copy; 2025 | <img src="img/meDigital-dev.png" alt="Logo meDigital-dev" height="25">
-                    meDigital-dev.</span>
-                <span>Template by <a href="https://twitter.com/mdo">@mdo</a>.</span>
+        <footer class="mastfoot mt-auto text-center py-3">
+            <div class="inner d-flex justify-content-between small">
+                <span>&copy; 2025 |
+                    meDigital-dev</span>
+                <span><a href="https://github.com/medigital-dev/offcanvas-bs4" target="_blank"><i
+                            class="bi bi-github"></i></a>
+                </span>
             </div>
         </footer>
     </div>
@@ -140,12 +251,17 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
 
     <script src="src/offcanvas-bs4.js"></script>
+    <script>$('#btnOffcanvas').on('click', () => $('.offcanvas').offcanvas('toggle'))</script>
 
 
 </body>
