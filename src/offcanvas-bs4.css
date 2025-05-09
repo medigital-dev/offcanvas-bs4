@@ -1,3 +1,7 @@
+body.offcanvas-open {
+  overflow: hidden;
+}
+
 .offcanvas {
   position: fixed;
   background-color: #fff;
@@ -60,10 +64,13 @@
 .offcanvas .close {
   background: none;
   border: none;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 .offcanvas.show {
-  transform: translate(0, 0);
+  transform: none;
 }
 
 .offcanvas-backdrop {
@@ -74,6 +81,11 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1040;
+}
+
+.offcanvas-backdrop.d-none {
+  display: none;
+  pointer-events: none;
 }
 
 /* Responsive breakpoints */

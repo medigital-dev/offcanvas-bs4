@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offcanvas Plugin Example</title>
+    <title>Offcanvas BS4 Plugin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="src/offcanvas-bs4.css">
+    <link rel="shortcut icon" href="img/meDigital-dev.png" type="image/x-icon">
     <style>
         html,
         body {
@@ -137,12 +138,12 @@
                     </p>
                     <p class="mb-0">
                         <code>
-                            &lt;script src="path/to/bootstrap.js"&gt;&lt;/script&gt;
+                            &lt;script src="path/to/jquery.js"&gt;&lt;/script&gt;
                             </code>
                     </p>
                     <p class="mb-0">
                         <code>
-                            &lt;script src="path/to/jquery.js"&gt;&lt;/script&gt;
+                            &lt;script src="path/to/bootstrap.js"&gt;&lt;/script&gt;
                             </code>
                     </p>
                     <p class="mb-0">
@@ -182,6 +183,45 @@
                         </table>
                     </div>
                     <hr class="bg-light">
+                    <h5>Position</h5>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <tr class="text-light">
+                                <th>Class</th>
+                                <th>Data Attribute</th>
+                                <th>Position</th>
+                            </tr>
+                            <tr>
+                                <td><code>.offcanvas-start</code></td>
+                                <td><code>data-position="start"</code></td>
+                                <td>
+                                    <code>Left</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>.offcanvas-end</code></td>
+                                <td><code>data-position="end"</code></td>
+                                <td>
+                                    <code>Right</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>.offcanvas-top</code></td>
+                                <td><code>data-position="top"</code></td>
+                                <td>
+                                    <code>Top</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>.offcanvas-bottom</code></td>
+                                <td><code>data-position="bottom"</code></td>
+                                <td>
+                                    <code>Bottom</code>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <hr class="bg-light">
                     <h5>Methods</h5>
                     <div class="table-responsive">
 
@@ -215,8 +255,8 @@
                         Bootstrap 5's offcanvas.
                     </p>
                     <div class="text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="offcanvas"
-                            data-target=".offcanvas">Demo</button>
+                        <button type="button" class="btn btn-primary" data-toggle="offcanvas" data-target=".offcanvas"
+                            data-position="end">Demo</button>
                     </div>
 
                 </div>
@@ -234,7 +274,7 @@
         </footer>
     </div>
 
-    <div class="offcanvas offcanvas-end" id="offcanvas-example">
+    <div class="offcanvas offcanvas-start" id="offcanvas-example">
         <div class="offcanvas-header">
             <h5 class="text-bold">Header</h5>
             <button class="close" data-toggle="offcanvas" data-target=".offcanvas">&times;</button>
